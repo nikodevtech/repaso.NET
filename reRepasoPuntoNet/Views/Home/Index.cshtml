@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";   
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido al examen</h1>
+    <h2>2ºevaluación ASP.NET Core</h2>
+
+
+    <h4>Click en los buttons en el orden indicado para mostrar en consola</h4>
+    <form asp-controller="Asignatura" asp-action="RealizarInsert" method="get">
+        <h5>Primera acción:</h5>
+        <button type="submit" class="btn btn-primary">Insert asignatura</button>
+    </form>
+    <form asp-controller="Estudiante" asp-action="RealizarInsert" method="get">
+        <h5>Segunda acción:</h5>
+        <button type="submit" class="btn btn-primary">Insert estudiante</button>
+    </form>
+    <form asp-controller="Home" asp-action="CrearRelacionBidireccional" method="get">
+        <h5>Tercera acción</h5>
+        <button type="submit" class="btn btn-primary">Relacion estudiante-asignatura</button>
+    </form>
+    <form asp-controller="Asignatura" asp-action="SelectAllAsignaturaS" method="get">
+        <h5>Cuarta acción:</h5>
+        <button type="submit" class="btn btn-primary">SELECT * FROM asignaturaS</button>
+    </form>
+    <form asp-controller="Estudiante" asp-action="SelectAllEstudiantes" method="get">
+        <h5>Quinta acción:</h5>
+        <button type="submit" class="btn btn-primary">SELECT * FROM estudianteS</button>
+    </form>
+    <form asp-controller="Estudiante" asp-action="EliminarEstudiante" method="get">
+        <h5>Sexta acción:</h5>
+        <button type="submit" class="btn btn-primary">DELETE estudiante</button>
+    </form>
+
+</div>
